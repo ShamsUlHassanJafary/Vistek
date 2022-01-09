@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="employees" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d3a15743-3c6e-44d0-b929-aef2a0bdf5c5">
+	<parameter name="Param_registration" class="java.lang.String"/>
+	<parameter name="Param_importUsedBeforeUkRegistration" class="java.lang.String"/>
+	<parameter name="Param_dateFirstRegistered" class="java.lang.String"/>
+	<parameter name="Param_model" class="java.lang.String"/>
+	<parameter name="Param_previousColour" class="java.lang.String"/>
+	<parameter name="Param_stolenStatus" class="java.lang.String"/>
+	<parameter name="Param_previousKeeperCount" class="java.lang.Integer"/>
+	<parameter name="Param_importDate" class="java.lang.String"/>
+	<parameter name="Param_stolenPoliceForce" class="java.lang.String"/>
+	<parameter name="Param_fuelType" class="java.lang.String"/>
+	<parameter name="Param_certificateOfDestructionIssued" class="java.lang.String"/>
+	<parameter name="Param_latestColourChangeDate" class="java.lang.String"/>
+	<parameter name="Param_colourChangeCount" class="java.lang.Integer"/>
+	<parameter name="Param_importedFromOutsideEu" class="java.lang.Boolean"/>
+	<parameter name="Param_make" class="java.lang.String"/>
+	<parameter name="Param_dateFirstRegisteredUk" class="java.lang.String"/>
+	<parameter name="Param_stolenDate" class="java.lang.String"/>
+	<parameter name="Param_latestKeeperChangeDate" class="java.lang.String"/>
+	<parameter name="Param_financeRecordCount" class="java.lang.String"/>
+	<parameter name="Param_plateChangeCount" class="java.lang.Integer"/>
+	<parameter name="Param_scrapDate" class="java.lang.String"/>
+	<parameter name="Param_exportDate" class="java.lang.String"/>
+	<parameter name="Param_gearCount" class="java.lang.Integer"/>
+	<parameter name="Param_transmissionType" class="java.lang.String"/>
+	<parameter name="Param_engineCapacity" class="java.lang.Integer"/>
+	<parameter name="Param_colour" class="java.lang.String"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="7644b993-0ce6-48e9-b0d1-16a99f3eae47"/>
+				<staticText>
+					<reportElement x="20" y="20" width="360" height="43" forecolor="#FFFFFF" uuid="b2bec062-7490-41de-a4b8-3abc2a84c4b4"/>
+					<textElement>
+						<font fontName="Arial Black" size="20" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Vehicle Information System]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="390" y="50" width="180" height="20" forecolor="#FFFFFF" uuid="3975c436-077a-421c-8068-d3afc0162c8a"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[powered by Teknikality]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="542" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="10" width="100" height="30" uuid="9a71282d-0ff4-4b0e-aa21-5aa6f2fe974f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Registration : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="250" width="100" height="30" uuid="eedc7e32-02b9-4fcb-9934-78f6b77de6b2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Plate Change Count : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="330" width="100" height="30" uuid="e2af35b3-db8a-4a83-8d6a-5b915215b6aa"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Stolen Police Force : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="50" width="100" height="30" uuid="313334b7-e222-483a-9df0-b4f6e468f562"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Import Used Before Uk Registration : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="90" width="100" height="30" uuid="262d754f-76eb-478c-b6a9-2e2d204e4f78"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date First Registered:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="130" width="100" height="30" uuid="49245a9d-af95-4ce1-924e-939e0bf71369"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Model : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="170" width="100" height="30" uuid="71385def-eb88-47ae-9272-da325fe8de9a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Previous Colour : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="210" width="100" height="30" uuid="c1c5de82-24c1-49f9-8be5-8eeff3f1d44e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Stolen Status : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="250" width="100" height="30" uuid="29782d44-23b6-4652-8935-0fd34840c0ca"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Previous Keeper Count : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="290" width="100" height="30" uuid="5561ce08-09df-4fcd-9fa0-81736c646bcd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Import Date : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="410" width="100" height="30" uuid="0024e25b-9bf9-4a31-92d7-f0ff33e9ad98"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Certificate Of Destruction Issued : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="450" width="100" height="30" uuid="ca2670a4-a8c8-47d7-b5e0-793a6a4ca1d5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Latest Colour Change Date : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="490" width="100" height="30" uuid="10afe475-6ae7-41b6-b854-c876961ac59d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Colour Change Count : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="10" width="100" height="30" uuid="89a56200-a3e3-4a8c-85f8-ca15ed17ebce"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Imported From Outside Eu:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="50" width="100" height="30" uuid="eef869cf-6c9d-426c-800a-18d09afffd2e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Make : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="90" width="100" height="30" uuid="59b61ee8-711b-45aa-8cf6-466ab6d0ae59"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date First Registered Uk : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="130" width="100" height="30" uuid="12803b6a-0754-46ab-8ce2-2d1d99838a55"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Stolen Date : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="170" width="100" height="30" uuid="2887a85b-23f2-48c9-ae6d-73eebfef4764"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Latest Keeper Change Date : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="210" width="100" height="30" uuid="2b2720ab-44c7-4c08-af50-10381d3bd134"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Finance Record Count : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="370" width="100" height="30" uuid="2061fcd9-ae3c-4735-90e0-41ef526cd509"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fuel Type : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="290" width="100" height="30" uuid="eb77c3c2-b5b3-4575-bb86-b4d906d890d5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Scrap Date : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="330" width="100" height="30" uuid="d6bdaf10-191c-4a06-be5c-77eb68d26f28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Export Date : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="370" width="100" height="30" uuid="2087829f-c4c7-4b0f-85c5-bcf007eaa330"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Gear Count : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="410" width="100" height="30" uuid="a4e559c8-09a2-4735-b851-2329a0c961bd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Transmission Type: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="450" width="100" height="30" uuid="6c408f84-4ea0-4bd0-8ede-a0ffe5c7fabf"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Engine Capacity : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="490" width="100" height="30" uuid="c22d4657-29a0-424f-b165-ce45910a7d79"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Colour : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="110" y="10" width="100" height="30" uuid="1038cf0f-47a7-4598-ba8c-04832a7b7baa"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Param_registration}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="50" width="100" height="30" uuid="b79a3076-b80d-4689-a353-0e092cae15a0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Param_importUsedBeforeUkRegistration}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="90" width="100" height="30" uuid="b03c38cd-4ac4-45b0-9fb6-6765f2b19a39"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Param_dateFirstRegistered}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="130" width="100" height="30" uuid="ddb5dc40-ac09-4811-815a-2159e28d541a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Param_model}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="170" width="100" height="30" uuid="d2207a17-ad5d-4992-8680-1560149da09c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Param_previousColour}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="210" width="100" height="30" uuid="1eaebe22-fc67-4ce6-b971-578d66f3f9f0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Param_stolenStatus}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="250" width="100" height="30" uuid="787d30aa-5ec6-470e-97e4-5d70dc657464"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Param_previousKeeperCount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="290" width="100" height="30" uuid="a9942f6f-aa93-4fa3-b5af-2247b05515b9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Param_importDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="330" width="100" height="30" uuid="d229ec85-914f-4c24-91d0-5f22a9103100"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Param_stolenPoliceForce}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="370" width="100" height="30" uuid="fb2b420a-6d5e-48ab-9b8b-016daa055719"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Param_fuelType}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="410" width="100" height="30" uuid="fa9c40ff-1111-43a4-b182-479e49ef9e89"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Param_certificateOfDestructionIssued}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="450" width="100" height="30" uuid="d0d4d847-be1a-4a01-a573-166c96f211d0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Param_latestColourChangeDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="490" width="100" height="30" uuid="0fd9b09c-55b4-4b0d-bd4d-a55f26988ef7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Param_colourChangeCount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="410" y="10" width="100" height="30" uuid="ea3ad62f-15fd-4b28-8c5a-db5c90044184"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Param_importedFromOutsideEu}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="410" y="50" width="100" height="30" uuid="602edad5-a2dc-41b0-ba29-dffb02494691"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Param_make}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="410" y="90" width="100" height="30" uuid="26720db7-f68b-4709-887d-5e41a400a0fb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Param_dateFirstRegisteredUk}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="410" y="130" width="100" height="30" uuid="32cee347-539f-47d8-8eaa-862894a3f9fb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Param_stolenDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="410" y="170" width="100" height="30" uuid="52a2fd91-6416-43ca-93f1-d12716c036bb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Param_latestKeeperChangeDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="410" y="210" width="100" height="30" uuid="fab2fa20-d8c7-4a85-bc4d-bd307abdd7e3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Param_financeRecordCount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="410" y="250" width="100" height="30" uuid="53f98381-8c80-48ea-816a-1b9f2fa281ca"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Param_plateChangeCount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="410" y="290" width="100" height="30" uuid="d45bdf26-b1da-4d0a-a0d8-6b86aa364f21"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Param_scrapDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="410" y="330" width="100" height="30" uuid="1ccc24db-22a8-4548-9020-16072788d01b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Param_exportDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="410" y="370" width="100" height="30" uuid="96081fd2-071a-456a-9d29-d3b90168de9e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Param_gearCount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="410" y="410" width="100" height="30" uuid="38882098-fdd2-4f66-b341-3d74282f7571"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Param_transmissionType}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="410" y="450" width="100" height="30" uuid="a70ab587-6e46-4e93-a02d-48d9d804e614"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Param_engineCapacity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="410" y="490" width="100" height="30" uuid="b375414b-a3dd-4ccf-9a1f-0f62b338a2e8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Param_colour}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
